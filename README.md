@@ -1,7 +1,7 @@
 # Меню
 <div class="filter">
     <details>
-        <summary>Общие рекомендации</summary>
+    <summary style="font-weight:bold">Общие рекомендации</summary>
         <ul>
             <li>
             <a href="#Развертывание проекта">Развертывание проекта</a>
@@ -9,27 +9,6 @@
         </ul>
     </details>
 </div>
-
-<style>
-.filter details + details {
-  margin-top: 1em;
-}
-.filter summary {
-  font-weight: 700;
-  cursor: pointer;
-}
-.filter ul {
-  list-style: none;
-  margin: 1em;
-  padding: 0;
-}
-.filter summary:hover {
-  color:#ff3200;
-}
-.filter summary a:hover {
-  color:#ff3200;
-}
-</style>
 
 # Общие рекомендации
 ## Развертывание проекта
