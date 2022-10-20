@@ -2,7 +2,7 @@
 
 <div class="filter">
     <details>
-    <summary>Общие рекомендации</summary>
+    <summary><h4>Общие рекомендации<h4></summary>
 
 * [Развертывание проекта](#Развертывание-проекта)
    * [Git](#git)
