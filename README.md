@@ -9,6 +9,7 @@
         </ul>
     </details>
 </div>
+
 <style>
 .filter details + details {
   margin-top: 1em;
