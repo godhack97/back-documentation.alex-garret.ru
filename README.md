@@ -200,4 +200,116 @@
       return $name;
    ```
 ---
-### Объектно-ориентированное программирование
+## Объектно-ориентированное программирование
+
+#### Пространства имён и оператор use
+1) После объявления пространства имен namespace необходима одна пустая строка.
+2)  Оператор use должен быть после объявления простарнства имён namespace.
+
+3) Использовать один `use` для всех обьевленных namespas-ов
+4)  После блока операторов  use должна быть одна пустая строка.
+
+```php
+namespace Godra\Api\HighloadBlock;
+
+use \Godra\Api\Iblock,
+    \Bitrix\Iblock\SectionTable,
+    \Godra\Api\Helpers\Utility\Misc;
+
+   ```
+#### Классы, свойства и методы
+1)  Каждый класс должен располагаться в отдельном файле именовоном так-же как и сам класс.
+
+#### Extends и implements
+1)  Ключевые слова extends и implements располагать на одной строке с именем класса.
+2)  Наследование классов не должно быть слишком запутанным, максимум 2 наследования.
+3)  Все используемые пространства имён нужно прописать в `use` и использовать в коде не полный namespace, а только его последнее или 2 последних именования
+```php
+use \Godra\Api\Iblock,
+    \Bitrix\Iblock\SectionTable,
+    \Godra\Api\Helpers\Utility\Misc;
+
+class Base
+{
+    function __construct()
+    {
+        SectionTable::getList();
+        Misc::getDte();
+    }
+}
+```
+#### Свойства
+1) Для всех свойств и методов класса необходимо объявлять область видимости public, static, protected, private;
+2)  Разделять пустой строкой константы и группы свойств по области видимости.
+3)   Недопустимо в одном объявлении указывать более одного свойства.
+```php
+abstract class Base
+{
+    public static $select_rows = [];
+    protected static $row_data = [];
+    private static $api_ib_code = false;
+}
+```
+#### Методы
+1)  Для всех методов класса необходимо объявлять область видимости public, static, protected, private;
+2)   Недопустимо объявлять методы с пробелом между названием и круглой скобкой.
+
+#### Аргументы методов
+1)  Аргументы метода со значениями по-умолчанию располагать в конце списка аргументов.
+    ```php
+    public function getNameByIdOrCode($id_or_code, $type = null )
+    {
+        if($type)
+            $filter = [$type => $id_or_code];
+    }
+    ```
+#### abstract, final и static
+1) Ключевые слова abstract и final пишутся перед модификаторам видимости.
+2) Ключевое слово static пишется после модификатора видимости.
+    ```php
+    abstract class Base
+    {
+        protected satic function getName()
+        {
+            return;
+        }
+    }
+    ```
+---
+## Документация
+### Классы
+1) Каждый класс должен иметь phpDoc блок с описанием входных данных `__construct` и сути класса
+2) Переменные в классе также должны быть описаны
+3) Каждая функция/метод класса должна иметь doc-блок.
+
+```php
+use \Bitrix\Iblock\IblockTable;
+
+/**
+ * Базовый абстрактный класс Каталога
+ * @param int $id id Каталога
+ */
+abstract class Base
+{
+    /**
+     * Id каталога
+     * @var int
+     */
+    protected $id;
+
+    function __construct($id)
+    {
+        $this->id = $id;
+        $this->getCatalogById($this->id)
+    }
+
+    /**
+     * Получение инфоблока каталога
+     * @param int $id ID инфоблока
+     * @return string|void
+     */
+    protected function getCatalogById($id)
+    {
+        return IblockTable::getById($id)->fetch()['NAME'];
+    }
+```
