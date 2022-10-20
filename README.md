@@ -1,8 +1,11 @@
 # Меню
 
-<div class="filter">
+
+<div style="color:green;font-weight:700;font-size:20px" class="filter">
     <details>
-    <summary><b style="color:blue">**Общие рекомендации**</b></summary>
+    <summary><b>
+    Общие рекомендации
+    </b></summary>
 
 * [Развертывание проекта](#Развертывание-проекта)
    * [Git](#git)
