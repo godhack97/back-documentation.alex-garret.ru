@@ -1,12 +1,11 @@
 # Меню
+
 <div class="filter">
     <details>
     <summary style="font-weight:bold">Общие рекомендации</summary>
-        <ul>
-            <li>
-            <a href="#Развертывание проекта">Развертывание проекта</a>
-            </li>
-        </ul>
+
+ + [Развертывание проекта](#Развертывание-проекта)
+
     </details>
 </div>
 
