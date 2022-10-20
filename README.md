@@ -1,6 +1,12 @@
 # Меню
 
 
+<style>
+    summary {
+        color: red;
+    }
+</style>
+
 <div style="color:green;font-weight:700;font-size:20px" class="filter">
     <details>
     <summary><b>
