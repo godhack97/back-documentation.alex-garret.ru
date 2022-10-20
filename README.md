@@ -25,7 +25,7 @@
 + [Extends и implements](Extends-и-implements)
 + [Свойства](#Свойства)
 + [Методы](#Методы)
-  + [Аргументы методов](#Аргументы-методов)
++ [Аргументы методов](#Аргументы-методов)
 + [abstract, final и static](#abstract-final-и-static)
 
     </details>
